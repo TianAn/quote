@@ -73,11 +73,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <tr>
                     <td>
                         <label class="checkbox checkbox-inline checkbox-lg" for="checkbox5a">
-                            <input type="checkbox" data-toggle="checkbox" value="" id="checkbox5a"  > 车上人员责任险（司机）
+                            <input type="checkbox" data-toggle="checkbox"  value="" id="checkbox5a"  > 车上人员责任险（司机）
                         </label>
                     </td>
                     <td>
-                        <input type="text" placeholder="请输入保额" class="form-control flat" />
+                        <input type="text" placeholder="请输入保额" onclick="myPrompt(this,'请输入单位保额')" class="form-control flat" />
                     </td>
                     <td>
                         <label class="checkbox checkbox-inline checkbox-lg" for="checkbox6a">

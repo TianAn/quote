@@ -14,8 +14,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/flat-ui.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/flat-ui.min.css">
+
 <link rel="shortcut icon" href="img/favicon.ico">
 <link rel="stylesheet" href="css/ystep.css">
 <script src="js/jquery-2.1.4.min.js"></script>
@@ -84,12 +85,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	
 	<!--需要添加的全局html-->
-    <div id="dialogprompt" title="系统提示：" style="background-color: ">
-        <div class="app-alerts alert alert-danger fade in" style="display:none;"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><i class="fa-lg fa fa-warning"></i> <span class="promptmsg"></span></div>
-        <p class="msgcontent" style="margin: 10px auto;
-text-align: center;">
-        </p>
-        <input type="text" class="text form-control" />
+    <div id="dialogprompt"  style="display:none;">
+       <input type="text" id="newcarV" value="" placeholder="请输入" class="form-control flat" style="width:100%"/>
     </div>
     <!--end需要添加的全局html-->
 	
@@ -144,8 +141,10 @@ text-align: center;">
 		});
 	
 	}
-	function ShPrompt() {
-		alert( $("#dialogprompt").offset().top);
+	function myPrompt(obj,title) {
+		var top=$(obj).offset().top;
+		var left=$(obj).offset().left;
+		
 		 $("#dialogprompt").dialog(
 			{
 				autoOpen:true,
@@ -153,11 +152,16 @@ text-align: center;">
 				closeOnEscape:true,
 				draggable:true,
 				resizable:false,
-				title:'单位保额',
-				position:'center',
+				title:title,
+				position:[left,top-30],
 				buttons:{
-					"Ok":function(){},
-					"Cancel":function(){}
+					"Ok":function(){
+						$(obj).val($("#newcarV").val());
+						$(this).dialog('close');
+					},
+					"Cancel":function(){
+						$(this).dialog('close');
+					}
 					
 				}
 			}		 
