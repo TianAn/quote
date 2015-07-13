@@ -79,7 +79,61 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="form-group">
             <div class="col-md-6 col-md-offset-1">
             	 <input type="button" id="endPage" onclick="marqueen(-1)" class="btn btn-success btn-wide" value="上一步"/>
-                 <input class="btn btn-success btn-wide" onclick="$('.ystep2').setStep(4);endPage.style.display='none';" type="button" value="报价" />
+                 <!-- <input class="btn btn-success btn-wide" onclick="$('.ystep2').setStep(4);endPage.style.display='none';" type="button" value="报价" /> -->
+                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					    Launch demo modal
+				</button>
+				
+				<!-- modal start -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header navbar-default">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title" id="myModalLabel">报价结果</h5>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-9 col-xs-12">
+                            <span class="col-md-4 control-label">无赔优</span>
+                            <div class="col-md-8">
+                                <h5 style="margin-top: auto;"> <span>1000.00</span></h5>
+                                <!--<input class="form-control" type="text" id="newcar" value="10000.00" >-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-9 col-xs-12">
+                            <span class="col-md-4 control-label">总优惠</span>
+                            <div class="col-md-8">
+                                <h5 style="margin-top: auto;"> <span>1000.00</span></h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-9 col-xs-12">
+                            <span class="col-md-4 control-label">总保费</span>
+                            <div class="col-md-8">
+                                <h5 style="margin-top: auto;"> <span>1000.00</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-wide" data-dismiss="modal">确定</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal end -->
             </div>
         </div>
        
