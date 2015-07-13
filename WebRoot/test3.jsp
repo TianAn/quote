@@ -80,8 +80,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="col-md-6 col-md-offset-1">
             	 <input type="button" id="endPage" onclick="marqueen(-1)" class="btn btn-success btn-wide" value="上一步"/>
                  <!-- <input class="btn btn-success btn-wide" onclick="$('.ystep2').setStep(4);endPage.style.display='none';" type="button" value="报价" /> -->
-                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-					    Launch demo modal
+                 <button type="button" class="btn btn-success btn-wide" data-toggle="modal" data-target="#myModal">
+					   报价
 				</button>
 				
 				<!-- modal start -->
